@@ -14,7 +14,6 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     
-    
     override func viewDidLoad() {
         super.viewDidLoad()
         // жест нажатия
