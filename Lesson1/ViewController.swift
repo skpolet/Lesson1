@@ -9,6 +9,8 @@
 import UIKit
 
 class ViewController: UIViewController {
+    
+    private let segueStr = "fromLoginSegue"
 
     @IBOutlet weak var scrollView: UIScrollView!
     @IBOutlet weak var passwordTextField: UITextField!
@@ -56,9 +58,14 @@ class ViewController: UIViewController {
         
         // Проверяем, верны ли они
         if login == "admin" && password == "123456" {
-            print("успешная авторизация")
+            performSegue(withIdentifier: segueStr, sender: self)
         } else {
-            print("неуспешная авторизация")
+            // Создаем алерт ошибки
+            let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
+            let action = UIAlertAction(title: "OK", style: .cancel, handler: nil)
+            // Добавляем кнопку и показываем алерт
+            alert.addAction(action)
+            present(alert, animated: true)
         }
 
     }
