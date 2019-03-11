@@ -17,6 +17,16 @@ class GroupDescriptionController: UITableViewController {
     
     //var tableCellBlock: (UITableViewCell) //-> UITableViewCell
     
+    override func loadView() {
+        super.loadView()
+        
+        if (groupDesc?.isSubscribe == true){
+            subscribe.setTitle("unsubscribe", for: .normal)
+        }else{
+            subscribe.setTitle("subscribe", for: .normal)
+        }
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -26,13 +36,6 @@ class GroupDescriptionController: UITableViewController {
         photoGroup.image = UIImage(data: data! as Data)
         
         nameGroup.text = groupDesc?.groupName
-        
-        if (groupDesc?.isSubscribe == true){
-            subscribe.titleLabel?.text = "unsubscribe"
-        }else{
-            subscribe.titleLabel?.text = "subscribe"
-        }
-
     }
 
 
