@@ -38,12 +38,14 @@ class GroupsController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        let items = group.filter{ $0.isSubscribe }.count
+        var items = 0
         
         if(groupSwitcher.selectedSegmentIndex==0)
         {
+            items = group.filter{ $0.isSubscribe == true}.count
             return items
         }else{
+            items = group.filter{ $0.isSubscribe == false}.count
             return items
         }
     }
