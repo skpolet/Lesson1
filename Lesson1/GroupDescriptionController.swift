@@ -35,6 +35,7 @@ class GroupDescriptionController: UITableViewController {
 
     }
 
+
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
@@ -47,8 +48,6 @@ class GroupDescriptionController: UITableViewController {
         return 3
     }
 
-    @IBAction func subscribeAction(_ sender: Any) {
-    }
     
 
     

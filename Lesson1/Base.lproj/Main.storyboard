@@ -390,7 +390,7 @@
                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                     <state key="normal" title="Subscribe"/>
                                                     <connections>
-                                                        <action selector="subscribeAction:" destination="aga-Ev-a82" eventType="touchUpInside" id="ALG-OQ-f5F"/>
+                                                        <segue destination="3Xx-Wy-URd" kind="unwind" unwindAction="didSelectSubscribeWithSegue:" id="Rnd-Si-2tA"/>
                                                     </connections>
                                                 </button>
                                             </subviews>
@@ -411,6 +411,7 @@
                     </connections>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ASP-2r-OUK" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="3Xx-Wy-URd" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
             <point key="canvasLocation" x="3664.8000000000002" y="542.87856071964018"/>
         </scene>

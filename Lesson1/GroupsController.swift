@@ -123,11 +123,25 @@ class GroupsController: UITableViewController {
         }
     }
     
+    @IBAction func didSelectSubscribe(segue: UIStoryboardSegue){
+        if let vc = segue.source as? GroupDescriptionController{
+            guard vc.groupDesc != nil else{
+                return
+            }
+            if let fromDescGrop = group.index(where: {$0.groupName == vc.groupDesc?.groupName}) {
+                if (vc.groupDesc?.isSubscribe == true){vc.groupDesc?.isSubscribe = false}
+                else{vc.groupDesc?.isSubscribe = true}
+                group[fromDescGrop] = vc.groupDesc!
+                self.tableView.reloadData()
+            }
+        }
+    }
+    
 }
 
 struct Group {
     let groupName : String
     let groupPhoto : String
-    let isSubscribe : Bool
+    var isSubscribe : Bool
 }
 
