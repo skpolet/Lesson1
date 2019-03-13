@@ -10,10 +10,17 @@ import UIKit
 
 class GroupsController: UITableViewController {
 
-    var group : [Group] = [Group(groupName: "Котики", groupPhoto: "https://cs8.pikabu.ru/post_img/big/2018/03/26/8/1522069566199676512.jpg", isSubscribe: true),Group(groupName: "Собачки", groupPhoto: "https://bipbap.ru/wp-content/uploads/2017/10/07_06_2017_10_08_15_jijtj2ru3nraq07t0u7a9degh0_war6mice03.jpg", isSubscribe: true),Group(groupName: "Автомобили", groupPhoto: "https://www.avtovzglyad.ru/media/article/P90258076_highRes_the-new-bmw-2-series.jpg.740x555_q85_box-439%2C28%2C3997%2C2697_crop_detail_upscale.jpg", isSubscribe: true),Group(groupName: "Цветы", groupPhoto: "https://cs2.livemaster.ru/storage/ed/c9/e47326de9d0f79f5ae50c2dcbfp7--tsvety-i-floristika-tsvety-v-korobke-s-syurprizom.jpg", isSubscribe: false),Group(groupName: "Печенье", groupPhoto: "https://s2.eda.ru/StaticContent/Photos/150420184224/160110003312/p_O.jpg", isSubscribe: false),Group(groupName: "Москва", groupPhoto: "https://upload.wikimedia.org/wikipedia/commons/thumb/a/a2/Moscow-City2015.jpg/405px-Moscow-City2015.jpg", isSubscribe: false)]
+    var group : [Group] = [Group(groupName: "Котики", groupPhoto: UIImage(named: "cat")!, isSubscribe: true, isLikePressed: true, countLikes: 20, groupDescription: "Животные"),
+                           Group(groupName: "Собачки", groupPhoto: UIImage(named: "dogs")!, isSubscribe: true, isLikePressed: false, countLikes: 3, groupDescription: "Животные"),
+                           Group(groupName: "Автомобили", groupPhoto: UIImage(named: "car")!, isSubscribe: true, isLikePressed: false, countLikes: 15, groupDescription: "Техника"),
+                           Group(groupName: "Цветы", groupPhoto: UIImage(named: "flower")!, isSubscribe: false, isLikePressed: false, countLikes: 44, groupDescription: "Растения"),
+                           Group(groupName: "Печенье", groupPhoto: UIImage(named: "cookies")!, isSubscribe: false, isLikePressed: true, countLikes: 33, groupDescription: "Кулинария"),
+                           Group(groupName: "Москва", groupPhoto: UIImage(named: "moscow")!, isSubscribe: false, isLikePressed: true, countLikes: 99, groupDescription: "Города")]
     
     @IBOutlet weak var searchBar: UISearchBar!
     @IBOutlet weak var groupSwitcher: UISegmentedControl!
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         groupSwitcher.addTarget(self, action: #selector(segmentAction(_:)), for: .valueChanged)
@@ -49,22 +56,19 @@ class GroupsController: UITableViewController {
             return items
         }
     }
-
     
     override func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: GropsCell.self), for: indexPath) as! GropsCell
         let itemstrue = group.filter{ $0.isSubscribe == true}
         let itemsfalse = group.filter{ $0.isSubscribe == false}
         if(groupSwitcher.selectedSegmentIndex==0){
-            let url = URL(string: itemstrue[indexPath.row].groupPhoto)
-            let data = NSData(contentsOf: url!)
-            cell.groupPhoto.image = UIImage(data: data! as Data)
+            cell.groupPhoto.image = itemstrue[indexPath.row].groupPhoto
             cell.groupName.text = itemstrue[indexPath.row].groupName
+            cell.aboutGroup.text = itemstrue[indexPath.row].groupDescription
         }else{
-            let url = URL(string: itemsfalse[indexPath.row].groupPhoto)
-            let data = NSData(contentsOf: url!)
             cell.groupName.text = itemsfalse[indexPath.row].groupName
-            cell.groupPhoto.image = UIImage(data: data! as Data)
+            cell.groupPhoto.image = itemsfalse[indexPath.row].groupPhoto
+            cell.aboutGroup.text = itemsfalse[indexPath.row].groupDescription
         }
         return cell
     }
@@ -143,7 +147,10 @@ class GroupsController: UITableViewController {
 
 struct Group {
     let groupName : String
-    let groupPhoto : String
+    let groupPhoto : UIImage
     var isSubscribe : Bool
+    var isLikePressed : Bool
+    var countLikes : Int
+    let groupDescription : String
 }
 

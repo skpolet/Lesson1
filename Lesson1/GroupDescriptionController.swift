@@ -14,6 +14,8 @@ class GroupDescriptionController: UITableViewController {
     @IBOutlet weak var subscribe: UIButton!
     
     public var groupDesc : Group?
+    @IBOutlet weak var isLikeImage: UIImageView!
+    @IBOutlet weak var countLikes: UILabel!
     
     //var tableCellBlock: (UITableViewCell) //-> UITableViewCell
     
@@ -30,12 +32,9 @@ class GroupDescriptionController: UITableViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
-        
-        let url = URL(string: groupDesc!.groupPhoto)
-        let data = NSData(contentsOf: url!)
-        photoGroup.image = UIImage(data: data! as Data)
-        
+        photoGroup.image = groupDesc?.groupPhoto
         nameGroup.text = groupDesc?.groupName
+        countLikes.text = String(groupDesc!.countLikes)
     }
 
 
@@ -48,7 +47,7 @@ class GroupDescriptionController: UITableViewController {
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 4
     }
 
     

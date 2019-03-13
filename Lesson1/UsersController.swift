@@ -8,7 +8,13 @@
 
 import UIKit
 
-class UsersController: UITableViewController {
+@IBDesignable class UsersController: UITableViewController {
+    
+    @IBInspectable var heightSection: CGFloat = 0 /*{
+        didSet {
+            self.updateRounded()
+        }*/
+    //}
     
     let users = ["Иван":"https://dom2life.ru/media/content/w960/2017-11-08_10-33-31__1f07c53c-c457-11e7-8207-002590aa0fe7.jpg", "Петр":"https://v1.popcornnews.ru/upload/hDQnx4.jpg","Стас":"https://hochu.ua/thumbnails/articles/cropr_640x490/88305_0.jpg"]
     
@@ -52,6 +58,10 @@ class UsersController: UITableViewController {
     
     override func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         performSegue(withIdentifier: "userPhotoSegue", sender: self)
+    }
+    
+    override func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return heightSection
     }
     /*
     // Override to support conditional editing of the table view.
