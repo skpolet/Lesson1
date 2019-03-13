@@ -19,6 +19,8 @@
 		E11C1BE922331A5500E400F2 /* PhotoController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C1BE822331A5500E400F2 /* PhotoController.swift */; };
 		E11C1BEB22331A7400E400F2 /* PhotoCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C1BEA22331A7400E400F2 /* PhotoCell.swift */; };
 		E11C1BED223320B700E400F2 /* GroupDescriptionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C1BEC223320B700E400F2 /* GroupDescriptionController.swift */; };
+		E11C1BEF2237F34F00E400F2 /* LoginView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C1BEE2237F34F00E400F2 /* LoginView.swift */; };
+		E11C1BF122390BCF00E400F2 /* AvatarView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E11C1BF022390BCF00E400F2 /* AvatarView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +38,8 @@
 		E11C1BE822331A5500E400F2 /* PhotoController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoController.swift; sourceTree = "<group>"; };
 		E11C1BEA22331A7400E400F2 /* PhotoCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PhotoCell.swift; sourceTree = "<group>"; };
 		E11C1BEC223320B700E400F2 /* GroupDescriptionController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupDescriptionController.swift; sourceTree = "<group>"; };
+		E11C1BEE2237F34F00E400F2 /* LoginView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginView.swift; sourceTree = "<group>"; };
+		E11C1BF022390BCF00E400F2 /* AvatarView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AvatarView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -71,6 +75,8 @@
 				E11C1BDB2232BD6800E400F2 /* cells */,
 				E1064CC52228854B001F122D /* AppDelegate.swift */,
 				E1064CC72228854B001F122D /* ViewController.swift */,
+				E11C1BEE2237F34F00E400F2 /* LoginView.swift */,
+				E11C1BF022390BCF00E400F2 /* AvatarView.swift */,
 				E11C1BE822331A5500E400F2 /* PhotoController.swift */,
 				E11C1BE42232C15400E400F2 /* UsersController.swift */,
 				E11C1BE62232C18700E400F2 /* GroupsController.swift */,
@@ -172,6 +178,8 @@
 				E11C1BEB22331A7400E400F2 /* PhotoCell.swift in Sources */,
 				E11C1BE32232C0FB00E400F2 /* GropsCell.swift in Sources */,
 				E1064CC82228854B001F122D /* ViewController.swift in Sources */,
+				E11C1BEF2237F34F00E400F2 /* LoginView.swift in Sources */,
+				E11C1BF122390BCF00E400F2 /* AvatarView.swift in Sources */,
 				E1064CC62228854B001F122D /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

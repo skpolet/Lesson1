@@ -11,11 +11,14 @@ import UIKit
 class UsersController: UITableViewController {
     
     let users = ["Иван":"https://dom2life.ru/media/content/w960/2017-11-08_10-33-31__1f07c53c-c457-11e7-8207-002590aa0fe7.jpg", "Петр":"https://v1.popcornnews.ru/upload/hDQnx4.jpg","Стас":"https://hochu.ua/thumbnails/articles/cropr_640x490/88305_0.jpg"]
+    
+    var indexPathRow : Int = 0
 
     @IBOutlet weak var searchBar: UISearchBar!
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        self.tableView.tableFooterView = UIView()
         // Uncomment the following line to preserve selection between presentations
         // self.clearsSelectionOnViewWillAppear = false
 
@@ -27,12 +30,12 @@ class UsersController: UITableViewController {
 
     override func numberOfSections(in tableView: UITableView) -> Int {
         // #warning Incomplete implementation, return the number of sections
-        return 1
+        return 3
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         // #warning Incomplete implementation, return the number of rows
-        return 3
+        return 1
     }
 
     
@@ -40,9 +43,9 @@ class UsersController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: String(describing: UsersCell.self), for: indexPath) as! UsersCell
         let usersNames = [String](users.keys)
         let usersPhoto = [String](users.values)
-        let url = URL(string: usersPhoto[indexPath.row])
+        let url = URL(string: usersPhoto[indexPath.section])
         let data = NSData(contentsOf: url!)
-        cell.userName.text = usersNames[indexPath.row]
+        cell.userName.text = usersNames[indexPath.section]
         cell.userPhoto.image = UIImage(data: data! as Data)
         return cell
     }
@@ -99,7 +102,6 @@ class UsersController: UITableViewController {
             viewController.userName = usersNames[indexPath!.row]
         }
     }
-    
 
 }
 extension UsersCell{
