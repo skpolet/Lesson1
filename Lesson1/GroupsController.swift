@@ -145,12 +145,5 @@ class GroupsController: UITableViewController {
     
 }
 
-struct Group {
-    let groupName : String
-    let groupPhoto : UIImage
-    var isSubscribe : Bool
-    var isLikePressed : Bool
-    var countLikes : Int
-    let groupDescription : String
-}
+
 
