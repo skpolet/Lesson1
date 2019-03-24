@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="wOM-yY-rDb">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14460.31" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -34,7 +34,7 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Пароль" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0z1-2Y-vpi">
-                                        <rect key="frame" x="158" y="203" width="59.5" height="21"/>
+                                        <rect key="frame" x="157.5" y="203" width="60" height="21"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <nil key="textColor"/>
                                         <nil key="highlightedColor"/>
@@ -78,11 +78,33 @@
                                             <constraint firstAttribute="width" id="cJd-Uv-bTa"/>
                                         </constraints>
                                     </view>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="3a3-4y-XAT" customClass="HeartButton" customModule="Lesson1" customModuleProvider="target">
+                                        <rect key="frame" x="165" y="397" width="46" height="46"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="46" id="UqE-Yw-WkA"/>
+                                            <constraint firstAttribute="height" constant="46" id="vDi-hc-ngF"/>
+                                        </constraints>
+                                        <color key="tintColor" red="1" green="0.31396146409999998" blue="0.57348525620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <state key="normal">
+                                            <color key="titleColor" red="1" green="0.31396146409999998" blue="0.57348525620000002" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="testHer:" destination="BYZ-38-t0r" eventType="touchUpInside" id="24B-bd-AwC"/>
+                                        </connections>
+                                    </button>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Идет загрузка" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4ja-fZ-RgS">
+                                        <rect key="frame" x="76" y="323" width="78" height="14"/>
+                                        <fontDescription key="fontDescription" type="system" pointSize="11"/>
+                                        <nil key="textColor"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
                                 </subviews>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="3a3-4y-XAT" secondAttribute="trailing" constant="164" id="06x-3S-CKs"/>
                                     <constraint firstItem="RfY-GU-hIX" firstAttribute="centerX" secondItem="Hei-Ax-Lj1" secondAttribute="centerX" id="1GE-ic-hzn"/>
                                     <constraint firstItem="SDE-tH-g3w" firstAttribute="top" secondItem="Hei-Ax-Lj1" secondAttribute="top" id="1PS-yD-3V5"/>
                                     <constraint firstItem="SDE-tH-g3w" firstAttribute="leading" secondItem="Hei-Ax-Lj1" secondAttribute="leading" id="2zg-mA-dYJ"/>
+                                    <constraint firstAttribute="bottom" secondItem="3a3-4y-XAT" secondAttribute="bottom" constant="224" id="3rk-9B-s9Z"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="OIN-Iv-qc3" secondAttribute="trailing" constant="15" id="3vX-eG-TC1"/>
                                     <constraint firstItem="RIb-u8-GXS" firstAttribute="leading" secondItem="Hei-Ax-Lj1" secondAttribute="leading" id="5GR-UG-cra"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="36k-Zq-jav" secondAttribute="trailing" constant="15" id="6rF-nx-Mc1"/>
@@ -90,6 +112,7 @@
                                     <constraint firstItem="RIb-u8-GXS" firstAttribute="height" secondItem="Hei-Ax-Lj1" secondAttribute="height" id="83D-jw-nda"/>
                                     <constraint firstItem="OIN-Iv-qc3" firstAttribute="top" secondItem="SDE-tH-g3w" secondAttribute="bottom" constant="30" id="8tF-7F-M9H"/>
                                     <constraint firstItem="3LD-0T-9kL" firstAttribute="centerX" secondItem="Hei-Ax-Lj1" secondAttribute="centerX" id="9so-Io-EtQ"/>
+                                    <constraint firstItem="4ja-fZ-RgS" firstAttribute="leading" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="76" id="BOX-5x-ojd"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="5dY-kG-o7U" secondAttribute="trailing" constant="15" id="Fbz-XQ-iUV"/>
                                     <constraint firstItem="SDE-tH-g3w" firstAttribute="width" secondItem="Hei-Ax-Lj1" secondAttribute="width" id="H47-0E-AvJ"/>
                                     <constraint firstItem="5dY-kG-o7U" firstAttribute="centerX" secondItem="Hei-Ax-Lj1" secondAttribute="centerX" id="M9j-yV-PNo"/>
@@ -99,10 +122,12 @@
                                     <constraint firstItem="RfY-GU-hIX" firstAttribute="top" secondItem="36k-Zq-jav" secondAttribute="bottom" constant="30" id="ajz-F8-dyn"/>
                                     <constraint firstItem="5dY-kG-o7U" firstAttribute="top" secondItem="3LD-0T-9kL" secondAttribute="bottom" constant="30" id="ecD-Ad-PR3"/>
                                     <constraint firstItem="OIN-Iv-qc3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="15" id="gja-Rd-x1A"/>
+                                    <constraint firstItem="3a3-4y-XAT" firstAttribute="top" secondItem="5dY-kG-o7U" secondAttribute="bottom" constant="104" id="hli-Zs-ELc"/>
                                     <constraint firstAttribute="trailing" secondItem="SDE-tH-g3w" secondAttribute="trailing" id="jJ5-ou-2Th"/>
                                     <constraint firstItem="5dY-kG-o7U" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="15" id="jld-3Q-BiW"/>
                                     <constraint firstItem="0z1-2Y-vpi" firstAttribute="centerX" secondItem="Hei-Ax-Lj1" secondAttribute="centerX" id="mpY-YH-L9J"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="3LD-0T-9kL" secondAttribute="trailing" constant="15" id="mrm-dt-49k"/>
+                                    <constraint firstItem="4ja-fZ-RgS" firstAttribute="top" secondItem="3LD-0T-9kL" secondAttribute="bottom" constant="90" id="nfF-xv-SST"/>
                                     <constraint firstAttribute="bottom" secondItem="RIb-u8-GXS" secondAttribute="bottom" id="reo-cJ-vHg"/>
                                     <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="0z1-2Y-vpi" secondAttribute="trailing" constant="15" id="s68-xj-lUh"/>
                                     <constraint firstItem="36k-Zq-jav" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="15" id="vUM-zt-dZa"/>
@@ -110,6 +135,7 @@
                                     <constraint firstItem="0z1-2Y-vpi" firstAttribute="top" secondItem="RfY-GU-hIX" secondAttribute="bottom" constant="30" id="xqr-Ck-sWc"/>
                                     <constraint firstItem="0z1-2Y-vpi" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="15" id="yN2-ML-Amk"/>
                                     <constraint firstItem="36k-Zq-jav" firstAttribute="top" secondItem="OIN-Iv-qc3" secondAttribute="bottom" constant="30" id="yhZ-lW-RHf"/>
+                                    <constraint firstItem="3a3-4y-XAT" firstAttribute="leading" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="165" id="zAZ-f8-d0s"/>
                                     <constraint firstItem="RfY-GU-hIX" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="RIb-u8-GXS" secondAttribute="trailing" constant="15" id="zAu-VE-ehc"/>
                                     <constraint firstItem="RIb-u8-GXS" firstAttribute="top" secondItem="SDE-tH-g3w" secondAttribute="bottom" id="zEc-md-m7W"/>
                                 </constraints>
@@ -142,6 +168,7 @@
                         </userDefinedRuntimeAttributes>
                     </view>
                     <connections>
+                        <outlet property="heart" destination="3a3-4y-XAT" id="nG9-ik-3aM"/>
                         <outlet property="loginTextField" destination="RfY-GU-hIX" id="EfI-2J-r23"/>
                         <outlet property="passwordTextField" destination="3LD-0T-9kL" id="cwc-74-pHm"/>
                         <outlet property="scrollView" destination="Hei-Ax-Lj1" id="FWS-mg-6Jw"/>

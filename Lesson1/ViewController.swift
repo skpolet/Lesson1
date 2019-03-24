@@ -16,12 +16,14 @@ class ViewController: UIViewController {
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var loginTextField: UITextField!
     
+    @IBOutlet weak var heart: HeartButton!
     override func viewDidLoad() {
         super.viewDidLoad()
         // жест нажатия
         let hideKeyboardGesture = UITapGestureRecognizer(target: self, action: #selector(hideKeyboard))
         // присваиваем его UIScrollVIew
         scrollView?.addGestureRecognizer(hideKeyboardGesture)
+        
     }
 
     // Когда клавиатура появляется
@@ -57,8 +59,8 @@ class ViewController: UIViewController {
         let password = passwordTextField.text!
         
         // Проверяем, верны ли они
-        if login == "admin" && password == "123456" {
-            performSegue(withIdentifier: segueStr, sender: self)
+        if login == "1" && password == "1" {
+            showLoadingScreen()
         } else {
             // Создаем алерт ошибки
             let alert = UIAlertController(title: "Ошибка", message: "Неверный логин или пароль", preferredStyle: .alert)
@@ -70,6 +72,23 @@ class ViewController: UIViewController {
 
     }
     
+    @IBAction func testHer(_ sender: Any) {
+        let shapeLayer = CAShapeLayer()
+        shapeLayer.path = heart.bezierPath.cgPath
+        shapeLayer.lineWidth = 2
+        shapeLayer.strokeColor = UIColor.white.cgColor
+        shapeLayer.fillColor = UIColor.red.cgColor
+        heart.layer.addSublayer(shapeLayer)
+        
+        let pathAnimation  = CABasicAnimation(keyPath: "strokeEnd")
+        pathAnimation.duration = 3
+        pathAnimation.fromValue = 0
+        pathAnimation.toValue = 1
+        
+        shapeLayer.add(pathAnimation, forKey: nil)
+        print("dada", heart.bezierPath)
+
+    }
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         
@@ -86,5 +105,31 @@ class ViewController: UIViewController {
         NotificationCenter.default.removeObserver(self, name: UIResponder.keyboardWillHideNotification, object: nil)
     }
 
+}
+
+extension ViewController {
+    
+    func showLoadingScreen() {
+        
+        let alert = UIAlertController(title: nil, message: "Загрузка данных ...", preferredStyle: .alert)
+        alert.view.frame    = CGRect(x: 0, y: 0, width: 100, height: 100)
+        
+        let loadingView = UINib(nibName: "LoadingIndicatorView", bundle: nil).instantiate(withOwner: nil, options: nil).first as! LoadingIndicatorView
+        
+        loadingView.frame =  CGRect(x: 110, y: 50, width: 40, height: 20)
+        alert.view.addSubview(loadingView)
+        
+        
+        present(alert, animated: true, completion: nil)
+        loadingView.startLoading()
+        
+        
+        DispatchQueue.main.asyncAfter(deadline: .now() + 2) {
+            self.dismiss(animated: false, completion: nil)
+            self.performSegue(withIdentifier: "fromLoginSegue", sender: self)
+        }
+        
+    }
+    
 }
 

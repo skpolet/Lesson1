@@ -7,6 +7,11 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E1044DA82248000200FCE8D2 /* ButtonHeart.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1044DA72248000200FCE8D2 /* ButtonHeart.swift */; };
+		E1044DAC2248263F00FCE8D2 /* LoadingIndicatorView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1044DAB2248263F00FCE8D2 /* LoadingIndicatorView.swift */; };
+		E1044DAE2248418500FCE8D2 /* LoadingIndicatorView.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1044DAD2248418500FCE8D2 /* LoadingIndicatorView.xib */; };
+		E1044DB122484BA300FCE8D2 /* LoadingScreen.xib in Resources */ = {isa = PBXBuildFile; fileRef = E1044DAF22484BA300FCE8D2 /* LoadingScreen.xib */; };
+		E1044DB222484BA300FCE8D2 /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1044DB022484BA300FCE8D2 /* LoadingScreen.swift */; };
 		E1064CC62228854B001F122D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1064CC52228854B001F122D /* AppDelegate.swift */; };
 		E1064CC82228854B001F122D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E1064CC72228854B001F122D /* ViewController.swift */; };
 		E1064CCB2228854C001F122D /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E1064CC92228854C001F122D /* Main.storyboard */; };
@@ -26,6 +31,11 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E1044DA72248000200FCE8D2 /* ButtonHeart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ButtonHeart.swift; sourceTree = "<group>"; };
+		E1044DAB2248263F00FCE8D2 /* LoadingIndicatorView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingIndicatorView.swift; sourceTree = "<group>"; };
+		E1044DAD2248418500FCE8D2 /* LoadingIndicatorView.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = LoadingIndicatorView.xib; sourceTree = "<group>"; };
+		E1044DAF22484BA300FCE8D2 /* LoadingScreen.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LoadingScreen.xib; sourceTree = "<group>"; };
+		E1044DB022484BA300FCE8D2 /* LoadingScreen.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		E1064CC22228854B001F122D /* Lesson1.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Lesson1.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E1064CC52228854B001F122D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E1064CC72228854B001F122D /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -82,6 +92,11 @@
 				E1064CC72228854B001F122D /* ViewController.swift */,
 				E11C1BEE2237F34F00E400F2 /* LoginView.swift */,
 				E11C1BF022390BCF00E400F2 /* AvatarView.swift */,
+				E1044DAB2248263F00FCE8D2 /* LoadingIndicatorView.swift */,
+				E1044DAD2248418500FCE8D2 /* LoadingIndicatorView.xib */,
+				E1044DB022484BA300FCE8D2 /* LoadingScreen.swift */,
+				E1044DAF22484BA300FCE8D2 /* LoadingScreen.xib */,
+				E1044DA72248000200FCE8D2 /* ButtonHeart.swift */,
 				E11C1BE822331A5500E400F2 /* PhotoController.swift */,
 				E11C1BE42232C15400E400F2 /* UsersController.swift */,
 				E11C1BE62232C18700E400F2 /* GroupsController.swift */,
@@ -173,7 +188,9 @@
 			files = (
 				E1064CD022288551001F122D /* LaunchScreen.storyboard in Resources */,
 				E1064CCD22288551001F122D /* Assets.xcassets in Resources */,
+				E1044DB122484BA300FCE8D2 /* LoadingScreen.xib in Resources */,
 				E1064CCB2228854C001F122D /* Main.storyboard in Resources */,
+				E1044DAE2248418500FCE8D2 /* LoadingIndicatorView.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -190,10 +207,13 @@
 				E11C1BE922331A5500E400F2 /* PhotoController.swift in Sources */,
 				E11C1BEB22331A7400E400F2 /* PhotoCell.swift in Sources */,
 				E11C1BE32232C0FB00E400F2 /* GropsCell.swift in Sources */,
+				E1044DAC2248263F00FCE8D2 /* LoadingIndicatorView.swift in Sources */,
+				E1044DA82248000200FCE8D2 /* ButtonHeart.swift in Sources */,
 				E1064CC82228854B001F122D /* ViewController.swift in Sources */,
 				E11C1BEF2237F34F00E400F2 /* LoginView.swift in Sources */,
 				E1FBE14D2241301A00BA22EE /* GlobalData.swift in Sources */,
 				E11C1BFF223D1F3F00E400F2 /* GroupDescriptionController.swift in Sources */,
+				E1044DB222484BA300FCE8D2 /* LoadingScreen.swift in Sources */,
 				E11C1BF122390BCF00E400F2 /* AvatarView.swift in Sources */,
 				E11C1BFD223D192400E400F2 /* DescriptionGroupCell.swift in Sources */,
 				E1064CC62228854B001F122D /* AppDelegate.swift in Sources */,
